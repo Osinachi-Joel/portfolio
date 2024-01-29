@@ -1,0 +1,93 @@
+/* Styling for the container within the about section */
+.about_container{
+    display: grid;
+    grid-template-columns: 35% 53%;/* Setting up a grid with two columns */
+    gap: 12%;
+}
+
+/* Styling for the portrait image within the about section */
+.about_portrait{
+    height: fit-content;
+    max-height: 40rem;
+    border: 1rem solid var(--color-white);
+    transition: var(--transition);
+}
+
+/* Styling for the hover effect on the portrait image */
+.about_portrait:hover{
+    border-width: 0;
+}
+
+/* Styling for the informational cards within the about section */
+.about_cards{
+    margin: 3rem 0 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* Styling for the informational cards using the 'about_card' class */
+.card.about_card{
+    text-align: center;
+}
+
+/* Styling for the icon within the informational cards */
+.about_card-icon{
+    font-size: 1.3rem;
+    color: var(--color-black);
+    border-radius: var(--border-radius-3);
+    width: fit-content;
+    margin-inline: auto;
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+/* Styling for the hover effect on the icon within the informational cards */
+.card.about_card:hover .about_card-icon{
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Styling for the heading within the informational cards */
+.card.about_card h5{
+    margin: 1rem 0;
+}
+
+/* Styling for the paragraphs within the right side of the about section */
+.about_right p{
+    margin-bottom: 0.8rem;
+}
+
+/* Styling for the buttons within the right side of the about section */
+.about_right .btn{
+    margin-top: 2.5rem;
+}
+
+/* Media Queries Tablets */
+@media screen and (max-width: 1024px) {
+    .about_left{
+        display: none;
+    }
+
+    .about_container{
+        grid-template-columns: 1fr;
+    }
+
+    .about_right h2{
+        text-align: center;
+    }
+}
+
+/* Media Queries Phones */
+@media screen and (max-width: 600px) {
+    .about_cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .about_right .btn{
+        margin-top: 2rem;
+    }
+}
